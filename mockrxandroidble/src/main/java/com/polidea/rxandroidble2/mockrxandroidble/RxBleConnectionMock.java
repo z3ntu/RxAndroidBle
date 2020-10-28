@@ -684,7 +684,7 @@ public class RxBleConnectionMock implements RxBleConnection {
 
     public static class Builder {
         private RxBleDeviceServices rxBleDeviceServices;
-        private int rssi;
+        private int rssi = -1;
         private Map<UUID, Observable<byte[]>> characteristicNotificationSources = new HashMap<>();
         private Map<UUID, RxBleCharacteristicReadCallback> characteristicReadCallbacks = new HashMap<>();
         private Map<UUID, RxBleCharacteristicWriteCallback> characteristicWriteCallbacks = new HashMap<>();
@@ -696,7 +696,9 @@ public class RxBleConnectionMock implements RxBleConnection {
         }
 
         public RxBleConnectionMock build() {
-            if (this.rssi == -1) throw new IllegalStateException("Rssi is required. DeviceBuilder#rssi should be called.");
+            if (this.rssi == -1 || this.rxBleDeviceServices == null) {
+                throw new IllegalStateException("Rssi is required. DeviceBuilder#rssi should be called.");
+            }
             return new RxBleConnectionMock(
                     rxBleDeviceServices,
                     rssi,
