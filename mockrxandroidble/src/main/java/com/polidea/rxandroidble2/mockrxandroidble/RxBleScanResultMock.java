@@ -1,9 +1,7 @@
 package com.polidea.rxandroidble2.mockrxandroidble;
 
-import androidx.annotation.NonNull;
 import com.polidea.rxandroidble2.RxBleDevice;
 import com.polidea.rxandroidble2.internal.ScanResultInterface;
-import com.polidea.rxandroidble2.internal.logger.LoggerUtil;
 import com.polidea.rxandroidble2.scan.ScanCallbackType;
 import com.polidea.rxandroidble2.scan.ScanRecord;
 import com.polidea.rxandroidble2.scan.ScanResult;
@@ -27,15 +25,15 @@ public class RxBleScanResultMock extends ScanResult implements ScanResultInterfa
         return getCallbackType();
     }
 
-    @Override
-    @NonNull
-    public String toString() {
-        return "ScanResult{"
-                + "bleDevice=" + bleDevice
-                + ", rssi=" + rssi
-                + ", timestampNanos=" + timestampNanos
-                + ", callbackType=" + callbackType
-                + ", scanRecord=not implemented"
-                + '}';
-    }
+//    @Override
+//    @NonNull
+//    public String toString() {
+//        return "ScanResult{"
+//                + "bleDevice=" + bleDevice
+//                + ", rssi=" + rssi
+//                + ", timestampNanos=" + timestampNanos
+//                + ", callbackType=" + callbackType
+//                + ", scanRecord=not implemented"
+//                + '}';
+//    }
 }
