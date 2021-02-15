@@ -1,4 +1,4 @@
-package com.polidea.rxandroidble2.internal.util;
+package com.polidea.rxandroidble3.internal.util;
 
 
 import android.annotation.TargetApi;
@@ -8,7 +8,7 @@ import android.location.LocationManager;
 import android.os.Build;
 import android.provider.Settings;
 import bleshadow.javax.inject.Inject;
-import com.polidea.rxandroidble2.internal.RxBleLog;
+import com.polidea.rxandroidble3.internal.RxBleLog;
 
 @TargetApi(19 /* Build.VERSION_CODES.KITKAT */)
 public class CheckerLocationProvider {

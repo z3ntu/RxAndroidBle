@@ -1,29 +1,29 @@
-package com.polidea.rxandroidble2;
+package com.polidea.rxandroidble3;
 
 import android.bluetooth.BluetoothDevice;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.polidea.rxandroidble2.RxBleAdapterStateObservable.BleAdapterState;
-import com.polidea.rxandroidble2.exceptions.BleScanException;
-import com.polidea.rxandroidble2.internal.RxBleDeviceProvider;
-import com.polidea.rxandroidble2.internal.RxBleLog;
-import com.polidea.rxandroidble2.internal.operations.LegacyScanOperation;
-import com.polidea.rxandroidble2.internal.operations.Operation;
-import com.polidea.rxandroidble2.internal.scan.RxBleInternalScanResult;
-import com.polidea.rxandroidble2.internal.scan.RxBleInternalScanResultLegacy;
-import com.polidea.rxandroidble2.internal.scan.ScanPreconditionsVerifier;
-import com.polidea.rxandroidble2.internal.scan.ScanSetup;
-import com.polidea.rxandroidble2.internal.scan.ScanSetupBuilder;
-import com.polidea.rxandroidble2.internal.serialization.ClientOperationQueue;
-import com.polidea.rxandroidble2.internal.util.CheckerLocationPermission;
-import com.polidea.rxandroidble2.internal.util.ClientStateObservable;
-import com.polidea.rxandroidble2.internal.util.LocationServicesStatus;
-import com.polidea.rxandroidble2.internal.util.RxBleAdapterWrapper;
-import com.polidea.rxandroidble2.scan.BackgroundScanner;
-import com.polidea.rxandroidble2.scan.ScanFilter;
-import com.polidea.rxandroidble2.scan.ScanResult;
-import com.polidea.rxandroidble2.scan.ScanSettings;
+import com.polidea.rxandroidble3.RxBleAdapterStateObservable.BleAdapterState;
+import com.polidea.rxandroidble3.exceptions.BleScanException;
+import com.polidea.rxandroidble3.internal.RxBleDeviceProvider;
+import com.polidea.rxandroidble3.internal.RxBleLog;
+import com.polidea.rxandroidble3.internal.operations.LegacyScanOperation;
+import com.polidea.rxandroidble3.internal.operations.Operation;
+import com.polidea.rxandroidble3.internal.scan.RxBleInternalScanResult;
+import com.polidea.rxandroidble3.internal.scan.RxBleInternalScanResultLegacy;
+import com.polidea.rxandroidble3.internal.scan.ScanPreconditionsVerifier;
+import com.polidea.rxandroidble3.internal.scan.ScanSetup;
+import com.polidea.rxandroidble3.internal.scan.ScanSetupBuilder;
+import com.polidea.rxandroidble3.internal.serialization.ClientOperationQueue;
+import com.polidea.rxandroidble3.internal.util.CheckerLocationPermission;
+import com.polidea.rxandroidble3.internal.util.ClientStateObservable;
+import com.polidea.rxandroidble3.internal.util.LocationServicesStatus;
+import com.polidea.rxandroidble3.internal.util.RxBleAdapterWrapper;
+import com.polidea.rxandroidble3.scan.BackgroundScanner;
+import com.polidea.rxandroidble3.scan.ScanFilter;
+import com.polidea.rxandroidble3.scan.ScanResult;
+import com.polidea.rxandroidble3.scan.ScanSettings;
 
 import io.reactivex.rxjava3.functions.Consumer;
 import io.reactivex.rxjava3.functions.Supplier;
@@ -51,7 +51,7 @@ class RxBleClientImpl extends RxBleClient {
     public static final String TAG = "RxBleClient";
     final ClientOperationQueue operationQueue;
     @SuppressWarnings("deprecation")
-    private final com.polidea.rxandroidble2.internal.util.UUIDUtil uuidUtil;
+    private final com.polidea.rxandroidble3.internal.util.UUIDUtil uuidUtil;
     private final RxBleDeviceProvider rxBleDeviceProvider;
     final ScanSetupBuilder scanSetupBuilder;
     final ScanPreconditionsVerifier scanPreconditionVerifier;
@@ -71,7 +71,7 @@ class RxBleClientImpl extends RxBleClient {
     RxBleClientImpl(RxBleAdapterWrapper rxBleAdapterWrapper,
                     ClientOperationQueue operationQueue,
                     Observable<BleAdapterState> adapterStateObservable,
-                    com.polidea.rxandroidble2.internal.util.UUIDUtil uuidUtil,
+                    com.polidea.rxandroidble3.internal.util.UUIDUtil uuidUtil,
                     LocationServicesStatus locationServicesStatus,
                     Lazy<ClientStateObservable> lazyClientStateObservable,
                     RxBleDeviceProvider rxBleDeviceProvider,

@@ -1,4 +1,4 @@
-package com.polidea.rxandroidble2.internal.util;
+package com.polidea.rxandroidble3.internal.util;
 
 import android.os.ParcelUuid;
 import androidx.annotation.NonNull;
@@ -6,10 +6,10 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RestrictTo;
 import android.util.SparseArray;
 
-import com.polidea.rxandroidble2.internal.logger.LoggerUtil;
-import com.polidea.rxandroidble2.internal.scan.ScanRecordImplCompat;
-import com.polidea.rxandroidble2.scan.ScanRecord;
-import com.polidea.rxandroidble2.internal.RxBleLog;
+import com.polidea.rxandroidble3.internal.logger.LoggerUtil;
+import com.polidea.rxandroidble3.internal.scan.ScanRecordImplCompat;
+import com.polidea.rxandroidble3.scan.ScanRecord;
+import com.polidea.rxandroidble3.internal.RxBleLog;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -27,7 +27,7 @@ import bleshadow.javax.inject.Inject;
  * Internal helper class for extracting list of Service UUIDs from Advertisement data
  *
  * @link http://stackoverflow.com/questions/31668791/how-can-i-read-uuids-from-advertisement-data-ios-overflow-area-in-android
- * @deprecated use {@link com.polidea.rxandroidble2.helpers.AdvertisedServiceUUIDExtractor} instead.
+ * @deprecated use {@link com.polidea.rxandroidble3.helpers.AdvertisedServiceUUIDExtractor} instead.
  * This class may change in later releases.
  */
 @Deprecated

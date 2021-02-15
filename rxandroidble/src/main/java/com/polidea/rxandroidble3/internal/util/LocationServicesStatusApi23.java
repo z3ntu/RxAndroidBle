@@ -1,8 +1,8 @@
-package com.polidea.rxandroidble2.internal.util;
+package com.polidea.rxandroidble3.internal.util;
 
 import android.os.Build;
 
-import com.polidea.rxandroidble2.ClientComponent;
+import com.polidea.rxandroidble3.ClientComponent;
 
 import bleshadow.javax.inject.Inject;
 import bleshadow.javax.inject.Named;

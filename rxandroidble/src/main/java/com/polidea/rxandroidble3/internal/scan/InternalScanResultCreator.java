@@ -1,20 +1,20 @@
-package com.polidea.rxandroidble2.internal.scan;
+package com.polidea.rxandroidble3.internal.scan;
 
 
-import static com.polidea.rxandroidble2.scan.ScanCallbackType.CALLBACK_TYPE_ALL_MATCHES;
-import static com.polidea.rxandroidble2.scan.ScanCallbackType.CALLBACK_TYPE_FIRST_MATCH;
-import static com.polidea.rxandroidble2.scan.ScanCallbackType.CALLBACK_TYPE_MATCH_LOST;
-import static com.polidea.rxandroidble2.scan.ScanCallbackType.CALLBACK_TYPE_UNKNOWN;
+import static com.polidea.rxandroidble3.scan.ScanCallbackType.CALLBACK_TYPE_ALL_MATCHES;
+import static com.polidea.rxandroidble3.scan.ScanCallbackType.CALLBACK_TYPE_FIRST_MATCH;
+import static com.polidea.rxandroidble3.scan.ScanCallbackType.CALLBACK_TYPE_MATCH_LOST;
+import static com.polidea.rxandroidble3.scan.ScanCallbackType.CALLBACK_TYPE_UNKNOWN;
 
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.le.ScanResult;
 import android.bluetooth.le.ScanSettings;
 import androidx.annotation.RequiresApi;
 import androidx.annotation.RestrictTo;
-import com.polidea.rxandroidble2.ClientScope;
-import com.polidea.rxandroidble2.internal.RxBleLog;
-import com.polidea.rxandroidble2.scan.ScanCallbackType;
-import com.polidea.rxandroidble2.scan.ScanRecord;
+import com.polidea.rxandroidble3.ClientScope;
+import com.polidea.rxandroidble3.internal.RxBleLog;
+import com.polidea.rxandroidble3.scan.ScanCallbackType;
+import com.polidea.rxandroidble3.scan.ScanRecord;
 import bleshadow.javax.inject.Inject;
 
 @RestrictTo(RestrictTo.Scope.LIBRARY_GROUP)
@@ -22,11 +22,11 @@ import bleshadow.javax.inject.Inject;
 public class InternalScanResultCreator {
 
     @SuppressWarnings("deprecation")
-    private final com.polidea.rxandroidble2.internal.util.UUIDUtil uuidUtil;
+    private final com.polidea.rxandroidble3.internal.util.UUIDUtil uuidUtil;
 
     @Inject
     @SuppressWarnings("deprecation")
-    public InternalScanResultCreator(com.polidea.rxandroidble2.internal.util.UUIDUtil uuidUtil) {
+    public InternalScanResultCreator(com.polidea.rxandroidble3.internal.util.UUIDUtil uuidUtil) {
         this.uuidUtil = uuidUtil;
     }
 
